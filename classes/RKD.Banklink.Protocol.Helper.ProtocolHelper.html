@@ -120,8 +120,26 @@
             <i class="icon-custom icon-method"></i> Methods
             <ul>
                                                                                                     <li class="method public">
-        <a href="#method_calculateReference" title="calculateReference :: Calculate reference number with 7-3-1 method">
-            <span class="description">Calculate reference number with 7-3-1 method</span><pre>calculateReference</pre>
+        <a href="#method_calculateReference" title="calculateReference :: Calculate reference number with 7-3-1 method.">
+            <span class="description">Calculate reference number with 7-3-1 method.</span><pre>calculateReference</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_generateEcuno" title="generateEcuno :: Generates transaction number for ECommerce protocol">
+            <span class="description">Generates transaction number for ECommerce protocol</span><pre>generateEcuno</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_langToISO6391" title="langToISO6391 :: Convert ISO-639-2 language code to ISO-639-1">
+            <span class="description">Convert ISO-639-2 language code to ISO-639-1</span><pre>langToISO6391</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_mbStrPad" title="mbStrPad :: Multibyte str_pad">
+            <span class="description">Multibyte str_pad</span><pre>mbStrPad</pre>
         </a>
     </li>
 
@@ -129,11 +147,11 @@
         </li>
         <li class="nav-header protected">» Protected
             <ul>
-                                                                                </ul>
+                                                                                                                                                                                            </ul>
         </li>
         <li class="nav-header private">» Private
             <ul>
-                                                                                </ul>
+                                                                                                                                                                                            </ul>
         </li>
         <li class="nav-header">
             <i class="icon-custom icon-constant"></i> Constants
@@ -150,7 +168,7 @@
                 <h1>ProtocolHelper</h1>
                 <small style="display: block; text-align: right">
                                                         </small>
-                <p class="short_description">Protocol helper</p>
+                <p class="short_description">Protocol helper.</p>
                 <div class="details">
                     <div class="long_description">
                         <p>Adds methdods used by multiple protocols. Such as calculating reference etc.</p>
@@ -171,7 +189,7 @@
                                                                             </th>
                                     <td>
                                                                                     
-                                                                                <p>Banklink\Protocol\Helper</p>
+                                                                                <p>Default</p>
                                     </td>
                                 </tr>
                                                                                                                                                                                 </table>
@@ -179,7 +197,7 @@
                     <h3><i class="icon-custom icon-method"></i> Methods</h3>
                                                                 <a id="method_calculateReference"></a>
                         <div class="element clickable method public  method_calculateReference" data-toggle="collapse" data-target=".method_calculateReference .collapse">
-                            <h2>Calculate reference number with 7-3-1 method</h2>
+                            <h2>Calculate reference number with 7-3-1 method.</h2>
                             <pre>calculateReference(integer $orderId) : string</pre>
                             <div class="labels">
                                                                 <span class="label">static</span>                                                                                                                            </div>
@@ -191,14 +209,14 @@
 EST: <a href="http://www.pangaliit.ee/et/arveldused/7-3-1meetod">http://www.pangaliit.ee/et/arveldused/7-3-1meetod</a></p></div>
 
                                     <table class="table">
-                                                                                    <tr>
-                                                <th>
-                                                    throws
-                                                </th>
+                                                                                                                            <tr>
+                                                <th>Throws</th>
                                                 <td>
-                                                                                                                                                                        
-                                                                                                                                                                        <p>If order ID is not in correct length</p>
-                                                                                                    </td>
+                                                    <dl>
+                                                                                                            <dt>\RKD\Banklink\Protocol\Helper\InvalidArgumentException</dt>
+                                                        <dd><p>If order ID is not in correct length</p></dd>
+                                                                                                                                                            </dl>
+                                                </td>
                                             </tr>
                                                                             </table>
 
@@ -210,6 +228,114 @@ EST: <a href="http://www.pangaliit.ee/et/arveldused/7-3-1meetod">http://www.pang
                                                                             
                                                                             <h3>Response</h3>
                                         <code>string</code><p><p>Calculated reference</p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_generateEcuno"></a>
+                        <div class="element clickable method public  method_generateEcuno" data-toggle="collapse" data-target=".method_generateEcuno .collapse">
+                            <h2>Generates transaction number for ECommerce protocol</h2>
+                            <pre>generateEcuno() : string</pre>
+                            <div class="labels">
+                                                                <span class="label">static</span>                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Format: YYYYMM + rand between 100 000 - 999 999</p></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    codeCoverageIgnore
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>string</code><p><p>Random ecuno</p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_langToISO6391"></a>
+                        <div class="element clickable method public  method_langToISO6391" data-toggle="collapse" data-target=".method_langToISO6391 .collapse">
+                            <h2>Convert ISO-639-2 language code to ISO-639-1</h2>
+                            <pre>langToISO6391(string $language) : string</pre>
+                            <div class="labels">
+                                                                <span class="label">static</span>                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$language</h4>
+                                                <code>string</code><p><p>ISO-639-2 language code</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>string</code><p><p>ISO-639-1 langauge code</p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_mbStrPad"></a>
+                        <div class="element clickable method public  method_mbStrPad" data-toggle="collapse" data-target=".method_mbStrPad .collapse">
+                            <h2>Multibyte str_pad</h2>
+                            <pre>mbStrPad(mixed $input, integer $padLength, string $padString = &#039; &#039;, string $padType = STR_PAD_RIGHT, string $encoding = null) : string</pre>
+                            <div class="labels">
+                                                                <span class="label">static</span>                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$input</h4>
+                                                <code>mixed</code><p><p>Input value</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$padLength</h4>
+                                                <code>integer</code><p><p>Desired length</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$padString</h4>
+                                                <code>string</code><p><p>Pad with</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$padType</h4>
+                                                <code>string</code><p><p>Pad direction</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$encoding</h4>
+                                                <code>string</code><p><p>Encoding</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>string</code><p><p>Padded string</p></p>
                                                                     </div>
                             </div>
 
@@ -236,7 +362,7 @@ EST: <a href="http://www.pangaliit.ee/et/arveldused/7-3-1meetod">http://www.pang
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Mon, 12 Oct 2015 13:19:22 +0200.<br/>
+            generated on Sat, 21 May 2016 13:33:35 +0200.<br/>
     </footer>
     </body>
 </html>

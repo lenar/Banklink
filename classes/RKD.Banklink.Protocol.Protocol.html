@@ -120,14 +120,20 @@
             <i class="icon-custom icon-method"></i> Methods
             <ul>
                                                                                                     <li class="method public">
-        <a href="#method_getPaymentRequest" title="getPaymentRequest :: Get payment object">
-            <span class="description">Get payment object</span><pre>getPaymentRequest</pre>
+        <a href="#method_getAuthRequest" title="getAuthRequest :: Get authnetication object.">
+            <span class="description">Get authnetication object.</span><pre>getAuthRequest</pre>
         </a>
     </li>
 
                                                                                                         <li class="method public">
-        <a href="#method_handleResponse" title="handleResponse :: Handles response from bank">
-            <span class="description">Handles response from bank</span><pre>handleResponse</pre>
+        <a href="#method_getPaymentRequest" title="getPaymentRequest :: Get payment object.">
+            <span class="description">Get payment object.</span><pre>getPaymentRequest</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_handleResponse" title="handleResponse :: Handles response from bank.">
+            <span class="description">Handles response from bank.</span><pre>handleResponse</pre>
         </a>
     </li>
 
@@ -135,11 +141,11 @@
         </li>
         <li class="nav-header protected">» Protected
             <ul>
-                                                                                                                    </ul>
+                                                                                                                                                        </ul>
         </li>
         <li class="nav-header private">» Private
             <ul>
-                                                                                                                    </ul>
+                                                                                                                                                        </ul>
         </li>
         <li class="nav-header">
             <i class="icon-custom icon-constant"></i> Constants
@@ -157,7 +163,7 @@
                 <small style="display: block; text-align: right">
                                             Extends 
                                                         </small>
-                <p class="short_description">Protocol interface</p>
+                <p class="short_description">Protocol interface.</p>
                 <div class="details">
                     <div class="long_description">
                         
@@ -178,15 +184,62 @@
                                                                             </th>
                                     <td>
                                                                                     
-                                                                                <p>Banklink\Protocol</p>
+                                                                                <p>Default</p>
                                     </td>
                                 </tr>
                                                                                                                             </table>
 
                     <h3><i class="icon-custom icon-method"></i> Methods</h3>
-                                                                <a id="method_getPaymentRequest"></a>
+                                                                <a id="method_getAuthRequest"></a>
+                        <div class="element clickable method public  method_getAuthRequest" data-toggle="collapse" data-target=".method_getAuthRequest .collapse">
+                            <h2>Get authnetication object.</h2>
+                            <pre>getAuthRequest(string $recId = null, string $nonce = null, string $rid = null, string $encoding = &#039;UTF-8&#039;, string $language = &#039;EST&#039;, string $timezone = &#039;Europe/Tallinn&#039;) : array</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$recId</h4>
+                                                <code>string</code><p><p>Bank identifier</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$nonce</h4>
+                                                <code>string</code><p><p>Random nonce</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$rid</h4>
+                                                <code>string</code><p><p>Session identifier.</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$encoding</h4>
+                                                <code>string</code><p><p>Encoding</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$language</h4>
+                                                <code>string</code><p><p>Language</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$timezone</h4>
+                                                <code>string</code><p><p>Timezone. Default: Europe/Tallinn</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>array</code><p><p>Authentication request data</p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getPaymentRequest"></a>
                         <div class="element clickable method public  method_getPaymentRequest" data-toggle="collapse" data-target=".method_getPaymentRequest .collapse">
-                            <h2>Get payment object</h2>
+                            <h2>Get payment object.</h2>
                             <pre>getPaymentRequest(string $orderId, float $sum, string $message, string $encoding = &#039;UTF-8&#039;, string $language = &#039;EST&#039;, string $currency = &#039;EUR&#039;, string $timezone = &#039;Europe/Tallinn&#039;) : \RKD\Banklink\Protocol\RKD\Banklink\Request\PaymentRequest</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
@@ -197,7 +250,7 @@
                                     <div class="long_description"></div>
 
                                     <table class="table">
-                                                                            </table>
+                                                                                                                    </table>
 
                                                                             <h3>Arguments</h3>
                                                                                     <div class="subelement argument">
@@ -237,8 +290,8 @@
                         </div>
                                             <a id="method_handleResponse"></a>
                         <div class="element clickable method public  method_handleResponse" data-toggle="collapse" data-target=".method_handleResponse .collapse">
-                            <h2>Handles response from bank</h2>
-                            <pre>handleResponse(array $response, string $encoding = &#039;UTF-8&#039;) : \RKD\Banklink\Protocol\RKD\Banklink\Response\PaymentResponse|\RKD\Banklink\Protocol\RKD\Banklink\Response\AuthResponse</pre>
+                            <h2>Handles response from bank.</h2>
+                            <pre>handleResponse(array $response, string $encoding = &#039;UTF-8&#039;) : \Response\PaymentResponse|\Response\AuthResponse</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
 
@@ -248,12 +301,12 @@
                                     <div class="long_description"></div>
 
                                     <table class="table">
-                                                                            </table>
+                                                                                                                    </table>
 
                                                                             <h3>Arguments</h3>
                                                                                     <div class="subelement argument">
                                                 <h4>$response</h4>
-                                                <code>array</code><p></p>
+                                                <code>array</code><p><p>Response data from bank</p></p>
                                             </div>
                                                                                     <div class="subelement argument">
                                                 <h4>$encoding</h4>
@@ -261,7 +314,7 @@
                                             </div>
                                                                             
                                                                             <h3>Response</h3>
-                                        <code>\RKD\Banklink\Protocol\RKD\Banklink\Response\PaymentResponse|\RKD\Banklink\Protocol\RKD\Banklink\Response\AuthResponse</code><p><p>Response object, depending on request made</p></p>
+                                        <code>\Response\PaymentResponse|\Response\AuthResponse</code><p><p>Response object, depending on request made</p></p>
                                                                     </div>
                             </div>
 
@@ -288,7 +341,7 @@
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Mon, 12 Oct 2015 13:19:24 +0200.<br/>
+            generated on Sat, 21 May 2016 13:33:35 +0200.<br/>
     </footer>
     </body>
 </html>
